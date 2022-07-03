@@ -1,0 +1,7 @@
+version: "3"
+
+services:
+  frontend:
+    image: pavelinnokentevichgalanin/todocalendar_frontend:latest
+    ports:
+      - 9001:80
