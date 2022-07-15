@@ -14,20 +14,18 @@
 
 ## Task
 
-Run frontend and backend on the server via docker-compose,
-uploading images to DockerHub.
+- Raise the image of the frontend and backend by downloading it from DockerHub via docker-compose.
+- Implement image auto-download when a new one appears on DockerHub.
 
 ## How to run app
 
 ```bash
-docker-compose up
-```
-
-If the image on Docker Hub has been updated then:
-
-```bash
-docker pull pavelinnokentevichgalanin/todocalendar_frontend:latest
-docker-compose up
+git clone https://github.com/ToDoCalendar/ToDoCalendar_server.git
+#git clone git@github.com:ToDoCalendar/ToDoCalendar_server.git
+cd ToDoCalendar_server
+cp .env.example .env
+docker-compose up -d
+docker-compose ps
 ```
 
 ## Application stack

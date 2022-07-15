@@ -14,20 +14,18 @@
 
 ## Задание
 
-Запустить на сервере frontend и backend через docker-compose,
-выгружая образы на DockerHub.
+- Поднять image фронтенда и бэкэнда, скачав его с DockerHub, через docker-compose.
+- Реализовать автоскачивание image при появлении нового на DockerHub.
 
 ## Как запустить приложение
 
 ```bash
-docker-compose up
-```
-
-Если образ на Docker Hub обновили, то:
-
-```bash
-docker pull pavelinnokentevichgalanin/todocalendar_frontend:latest
-docker-compose up
+git clone https://github.com/ToDoCalendar/ToDoCalendar_server.git
+#git clone git@github.com:ToDoCalendar/ToDoCalendar_server.git
+cd ToDoCalendar_server
+cp .env.example .env
+docker-compose up -d
+docker-compose ps
 ```
 
 ## Стэк приложений
